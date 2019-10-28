@@ -189,7 +189,7 @@ delete object.someProperty;
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-            
+            const secondArray =firstArray;
             ////////////////////////////////////////////////////////////////////
 
             expect(secondArray).to.eql([1, 2, 3]);
@@ -211,7 +211,7 @@ delete object.someProperty;
             ////////////////////////////////////////////////////////////////////
             // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
             // ✏️ ADD CODE HERE ✏️
-
+const secondArray = Array.of(...firstArray);
             ////////////////////////////////////////////////////////////////////
 
             expect(firstArray).to.eql([1, 2, 3]);
@@ -250,7 +250,8 @@ console.log(longArray.length);
             // By observing their casting behavior in the tests below, you can find
             // out the required types.
             // ✏️ ADD CODE HERE ✏️
-
+const firstVariable = 1+2;
+const secondVariable = "1";
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof firstVariable).to.equal("number");
@@ -267,7 +268,10 @@ console.log(longArray.length);
             ////////////////////////////////////////////////////////////////////
             // Can you find a string that casts to `false` in an if() statement?
             // ✏️ ADD CODE HERE ✏️
-
+const falsyString = "";
+if(falsyString){
+    console.log("falsystring is not falsy")
+};
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyString).to.equal("string");
@@ -308,7 +312,10 @@ console.log(longArray.length);
             ////////////////////////////////////////////////////////////////////
             // Can you find a value that is typeof "object" but also casts to `false`?
             // ✏️ ADD CODE HERE ✏️
-
+var falsyThing = null;
+if(falsyThing){
+    console.log("falsyThing is not falsy")
+};
             ////////////////////////////////////////////////////////////////////
 
             expect(typeof falsyThing).to.equal("object");
